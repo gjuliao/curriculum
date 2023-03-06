@@ -10,6 +10,3 @@ class Student < Person
     '¯(ツ)/¯'
   end
 end
-
-student1 = Student.new 'gio'
-p student1

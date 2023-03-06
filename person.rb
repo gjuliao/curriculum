@@ -1,4 +1,5 @@
-class Person
+require_relative 'nameable'
+class Person < Nameable
   attr_reader :id
   attr_accessor :name, :age, :parent_permission
 
@@ -13,9 +14,20 @@ class Person
     of_age? || parent_permission ? true : false
   end
 
+  def correct_name
+    @name
+  end
+
   private
 
   def of_age?(age)
     age >= 18
   end
 end
+
+person = Person.new('maximilianus', 22)
+p person.correct_name
+capitalizedPerson = CapitalizeDecorator.new(person)
+p capitalizedPerson.correct_name
+capitalizedTrimmedPerson = TrimmerDecorator.new(capitalizedPerson)
+p capitalizedTrimmedPerson.correct_name
