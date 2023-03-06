@@ -1,4 +1,4 @@
-require_relative 'person_class'
+require_relative 'person'
 
 class Student < Person
   def initialize(name, age, parent_permission, classroom)
@@ -6,5 +6,7 @@ class Student < Person
     @classroom = classroom
   end
 
-  def play_hooky; end
+  def play_hooky
+    '¯(ツ)/¯'
+  end
 end
