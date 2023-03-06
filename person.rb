@@ -19,6 +19,3 @@ class Person
     age >= 18
   end
 end
-
-person1 = Person.new 'gio', 21, true
-person1.can_use_service?
