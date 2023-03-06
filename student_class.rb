@@ -1,5 +1,3 @@
-# encoding: UTF-8
-
 require_relative 'person_class'
 
 class Student < Person
@@ -8,7 +6,5 @@ class Student < Person
     @classroom = classroom
   end
 
-  def play_hooky
-    p '¯(ツ)/¯'
-  end
+  def play_hooky; end
 end
