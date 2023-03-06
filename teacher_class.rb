@@ -1,10 +1,8 @@
-require_relative 'person_class.rb'
+require_relative 'person_class'
+
 class Teacher < Person
-    def initialize name, age, specialization
-        super(name, age)
-        @specialization = specialization
-    end
-    def can_use_service?
-        super
-    end
+  def initialize(name, age, specialization)
+    super(name, age)
+    @specialization = specialization
+  end
 end
