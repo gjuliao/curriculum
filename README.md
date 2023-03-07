@@ -60,27 +60,36 @@ and follow these steps.
 Clone this repository to your desired folder:
 
 1. Download the **Zip** file or clone the repo with:
-   `bash git clone git@github.com:gjuliao/curriculum.git`
+ ```bash
+git clone git@github.com:gjuliao/curriculum.git
+```
 2. To access cloned directory run:
-   `bash cd curriculum `
+```bash
+cd curriculum 
+```
 
 ### Install
 
 > To install linters and other project's dependencies run:
-> `bash npm install `
+
+```bash
+ bundle install
+```
 
 ### Usage
 
 To run the project, execute the following command:
+```bash
+ruby main.rb
+```
 
 ### Run tests
 
-To run tests, run the following command:
-
-Test for Linters For tracking linter errors locally you need to follow these steps:
-
-1. For tracking linter errors in Ruby files run:
-   `rubocop . `
+For tracking linter errors in Ruby files run:
+ 
+ ```
+   rubocop . 
+ ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -125,6 +134,6 @@ I would like to thank the Microverse team for the creation of this example proje
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./license.md) licensed.
+This project is [MIT](./license) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
