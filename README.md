@@ -69,10 +69,6 @@ Clone this repository to your desired folder:
 > To install linters and other project's dependencies run:
 > `bash npm install `
 
-### Usage
-
-To run the project, execute the following command:
-
 ### Run tests
 
 To run tests, run the following command:
