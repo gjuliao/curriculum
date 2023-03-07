@@ -14,56 +14,40 @@
 # 📗 Table of Contents
 
 - [📖 About the Project](#about-project)
-  - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
   - [Install](#install)
   - [Usage](#usage)
   - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ](#faq)
 - [📝 License](#license)
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 React Todos <a name="about-project"></a>
+# 📖 Curriculum <a name="about-project"></a>
 
 ** Curriculum ** Is a Ruby project that creates a library book project, consisting of hosting the records of borrowed books from students and teachers.
 
 ## 🛠 Built With <a name="built-with"></a>
 
-### Tech Stack <a name="tech-stack"></a>
 
-> <details>
-
-  <summary>Client</summary>
   <ul>
     <li><a href="https://www.ruby-lang.org/en/documentation/">Ruby</a></li>
   </ul>
-</details>
+
 
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
 
 - **Back-End Ruby operations**
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LIVE DEMO -->
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-- [Live Demo Link Pending]()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -107,10 +91,6 @@ Test for Linters For tracking linter errors locally you need to follow these ste
 1. For tracking linter errors in Ruby files run:
    `rubocop . `
 
-### Deployment
-
-You can deploy this project using:
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHORS -->
@@ -138,8 +118,6 @@ Feel free to check the [issues page](https://github.com/gjuliao/curriculum/issue
 
 ## ⭐️ Show your support <a name="support"></a>
 
-> Write a message to encourage readers to support your project
-
 If you like this project please give it a star.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -147,8 +125,6 @@ If you like this project please give it a star.
 <!-- ACKNOWLEDGEMENTS -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
-
-> Give credit to everyone who inspired your codebase.
 
 I would like to thank the Microverse team for the creation of this example project.
 
