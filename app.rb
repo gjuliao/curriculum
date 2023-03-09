@@ -82,5 +82,37 @@ class App
         $stdin.getch.to_i
     end
 
+    def create_rental
+        if @books.empty?
+            puts '** No books to rent, please create a new book **'
+            @main_menu.comeback
+        end
+        puts 'Select the book to rent: '
+        @books.each_with_index { |book, index| puts "[#{index}] - Title: #{book.title} - Author: #{book.author}" }
+        book_selected = $stdin.getch.to_i
 
+        @main_menu.comeback unless (person_selected = show_persons)
+
+        print "\n Date to return the book [MM/DD/YYYY]: "
+        date_return = gets.chomp
+
+        @rentals.push(Rental.new(date_return, @books[book_selected], @persons[person_selected]))
+        puts "** Rental added successfully **"
+        @main_menu.comeback
+    end
+
+    def rentals_to_person
+        return unless (person_selected = showpersons)
+
+        person_id = @persons[person_selected].id
+        puts "\n Rentals for #{@persons[person_selected].correct_name}"
+        @rentals.map do |rental|
+            puts "#{rental.date} - Book: #{rental.book_title} by #{rental.book.author}" if rental.person.id == person_id
+        end
+        @main_menu.comeback
+    end
+
+    def exit_app
+        exit(true)
+    end
 end
