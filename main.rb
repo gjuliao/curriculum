@@ -39,5 +39,14 @@ class Menu
         $stdin.getch
         show_options
     end
-    
+
+    def main
+        show_options
+    end
+
+    def comeback
+        puts "** Please click any key to go back to main menu **"
+        $stin.getch
+        main
+    end
 end
