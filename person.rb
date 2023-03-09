@@ -1,5 +1,5 @@
 require_relative 'nameable'
-class Person < lsnameable
+class Person < Nameable
   attr_reader :id
   attr_accessor :name, :age, :rental
 

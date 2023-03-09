@@ -9,7 +9,7 @@ class Book
   end
 
   def add_rental(rental)
-    @rentals.push(rental)
+    @rental.push(renta)
     rental.book = self
   end
 end
