@@ -22,4 +22,22 @@ class Menu
         user_input = $stdin.getch
         do_option(user_input)
     end
+    
+    def do_option(selected_option)
+        selected = @options.find { |option| option[:id] == selected_option.to_i }
+        if seleced.nil?
+            unavailable_option
+            return 
+        end
+        $stdout.clear_screen
+        @app.send(selected[:option])
+    end
+
+    def unavailable_option
+        $stdout.clear_screen
+        puts "** Invalid option, please try with available options **"
+        $stdin.getch
+        show_options
+    end
+    
 end
