@@ -70,7 +70,7 @@ class App
         @main_menu.comeback
     end
 
-    def show_person
+    def show_persons
         if @persons.empty?
             puts '** No person to rent books, please create a new person **'
             return false
@@ -81,4 +81,6 @@ class App
         end
         $stdin.getch.to_i
     end
+
+
 end
