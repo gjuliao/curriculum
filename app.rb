@@ -65,33 +65,36 @@ def create_book(books)
   puts '** Book created successfully **'
 end
 
-def show_persons
-  if @persons.empty?
+=begin 
+def show_persons(persons)
+  if persons.empty?
     puts '** No person to rent books, please create a new person **'
     return false
   end
   puts 'Select person who\'s renting the book'
-  @persons.each_with_index do |person, index|
+  persons.each_with_index do |person, index|
     puts "[#{index}] - #{person.classroom} - Name: #{person.correct_name}"
   end
-  $stdin.getch.to_i
 end
+=end
 
 def create_rental(books, people, rentals)
   puts 'Select the book to rent: '
   books.each_with_index { |book, index| puts "[#{index}] - Title: #{book.title} - Author: #{book.author}" }
   book_selected = gets.chomp.to_i
 
-  puts 'Select id of person renting the book: '
+  puts 'Select index of person renting the book: '
   people.each_with_index do |person, index|
-    puts "#{index} [#{person.class}] Name: #{person.name}, Id: #{person.id} Age: #{person.age}"
+    puts "Index: #{index} [#{person.class}] Name: #{person.name}, Id: #{person.id} Age: #{person.age}"
   end
   person_selected = gets.chomp.to_i
 
   print 'Date to return the book [MM/DD/YYYY]: '
   date = gets.chomp
 
-  rentals.push(Rental.new(date: date, person: people[person_selected], book: books[book_selected]))
+  books.push(Rental.new(date: date, person: people[person_selected], book: books[book_selected]))
+ # books[book_selected].add_rental(new_rent)
+ # people[person_selected].add_rental(new_rent)
   puts '** Rental added successfully **'
 end
 

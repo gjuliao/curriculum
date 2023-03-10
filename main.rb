@@ -21,7 +21,9 @@ def display_list
   '
 end
 
-def options(books, people, rentals)
+def options(books,
+            people,
+            rentals)
   loop do
     display_list
     option = gets.chomp.to_i
