@@ -10,7 +10,7 @@ def main
 end
 
 def display_list
-  puts 'Please input number from the list: 
+  puts 'Please input number from the list:
   1 - List all books
   2 - List all people
   3 - Create a person
@@ -22,7 +22,7 @@ def display_list
 end
 
 def options(books, people, rentals)
-  loop do 
+  loop do
     display_list
     option = gets.chomp.to_i
     case option
@@ -34,7 +34,7 @@ def options(books, people, rentals)
       create_person(people)
     when 4
       create_book(books)
-    when 5 
+    when 5
       create_rental(books, people, rentals)
     when 6
       rentals_list(rentals)

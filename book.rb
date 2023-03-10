@@ -12,4 +12,3 @@ class Book
     rental.book = self
   end
 end
-  
