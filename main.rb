@@ -29,13 +29,13 @@ def options(books, people, rentals)
     when 1
       list_all_books(books)
     when 2
-      list_all_people(people)
+      list_all_persons(people)
     when 3
       create_person(people)
     when 4
       create_book(books)
     when 5 
-      create_rental(books, people, rental)
+      create_rental(books, people, rentals)
     when 6
       rentals_list(rentals)
     else

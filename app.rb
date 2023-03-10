@@ -6,7 +6,7 @@ require_relative './rental'
 
 def list_all_books(books)
   if books[0]
-  @books.each { |title, author| puts "Book: #{title} - Author: #{author}" }
+  books.each { |title, author| puts "Book: #{title} - Author: #{author}" }
   else
     puts 'Library is empty'
   end
