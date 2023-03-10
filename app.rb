@@ -92,7 +92,7 @@ def create_rental(books, people, rentals)
   print 'Date to return the book [MM/DD/YYYY]: '
   date = gets.chomp
 
-  books.push(Rental.new(date: date, person: people[person_selected], book: books[book_selected]))
+  rentals.push(Rental.new(date: date, person: people[person_selected], book: books[book_selected]))
  # books[book_selected].add_rental(new_rent)
  # people[person_selected].add_rental(new_rent)
   puts '** Rental added successfully **'
@@ -103,7 +103,7 @@ def rentals_list(rentals)
   person_id = gets.chomp.to_i
 
   rentals.each do |rental|
-    puts "Date: #{rental.date} - Book: #{rental.book_title} by #{rental.book.author}" if rental.person.id == person_id
+    puts "Date: #{rental.date} - Book: #{rental.book.title} by #{rental.book.author}" if rental.person.id == person_id
   end
 end
 
