@@ -1,54 +1,48 @@
-class Menu
-  def initialize
-    @app = App.new(self)
-    @options = [
-      { id: 1, option: 'list_all_books', menu_item: 'list all books' },
-      { id: 2, option: 'list_all_persons', menu_item: 'list all persons' },
-      { id: 3, option: 'create_person', menu_item: 'create person' },
-      { id: 4, option: 'create_book', menu_item: 'create book' },
-      { id: 5, option: 'create_rental', menu_item: 'Create Rental' },
-      { id: 6, option: 'rentals_to_person', menu_item: 'list all rentals of given person' },
-      { id: 7, option: 'exit_app', menu_item: 'exit app' }
-    ]
-  end
+require_relative './app'
 
-  def show_options
-    $stdout.clear_screen
-    puts 'Please press an available option number: '
-    @options.each do |option|
-      puts "[#{option[:id]}] - #{option[:menu_item]}"
+def main
+  puts 'Welcome to the school library applicaiton'
+  books = []
+  people = []
+  rentals = []
+
+  options(books, people, rentals)
+end
+
+def display_list
+  puts 'Please input number from the list: 
+  1 - List all books
+  2 - List all people
+  3 - Create a person
+  4 - Create a book
+  5 - Create a rental
+  6 - List all rentals for given person
+  7 - Exit
+  '
+end
+
+def options(books, people, rentals)
+  loop do 
+    display_list
+    option = gets.chomp.to_i
+    case option
+    when 1
+      list_all_books(books)
+    when 2
+      list_all_people(people)
+    when 3
+      create_person(people)
+    when 4
+      create_book(books)
+    when 5 
+      create_rental(books, people, rental)
+    when 6
+      rentals_list(rentals)
+    else
+      exit_app
+      break
     end
-    user_input = $stdin.getch
-    do_option(user_input)
-  end
-
-  def do_option(user_option)
-    selected = @options.find { |option| option[:id] == user_option.to_i }
-    if selected.nil?
-      unavailable_option
-      return
-    end
-    $stdout.clear_screen
-    @app.send(selected[:option])
-  end
-
-  def unavailable_option
-    $stdout.clear_screen
-    puts '** Invalid option, please try with available options **'
-    $stdin.getch
-    show_options
-  end
-
-  def main
-    show_options
-  end
-
-  def comeback
-    puts '** Please click any key to go back to main menu **'
-    $stin.getch
-    main
   end
 end
 
-main_menu = Menu.new
-main_menu.menu
+main
