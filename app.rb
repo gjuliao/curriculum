@@ -65,19 +65,6 @@ def create_book(books)
   puts '** Book created successfully **'
 end
 
-=begin 
-def show_persons(persons)
-  if persons.empty?
-    puts '** No person to rent books, please create a new person **'
-    return false
-  end
-  puts 'Select person who\'s renting the book'
-  persons.each_with_index do |person, index|
-    puts "[#{index}] - #{person.classroom} - Name: #{person.correct_name}"
-  end
-end
-=end
-
 def create_rental(books, people, rentals)
   puts 'Select the book to rent: '
   books.each_with_index { |book, index| puts "[#{index}] - Title: #{book.title} - Author: #{book.author}" }
@@ -93,8 +80,7 @@ def create_rental(books, people, rentals)
   date = gets.chomp
 
   rentals.push(Rental.new(date: date, person: people[person_selected], book: books[book_selected]))
- # books[book_selected].add_rental(new_rent)
- # people[person_selected].add_rental(new_rent)
+
   puts '** Rental added successfully **'
 end
 

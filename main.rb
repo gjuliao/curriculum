@@ -21,9 +21,7 @@ def display_list
   '
 end
 
-def options(books,
-            people,
-            rentals)
+def options(books, people, rentals) # rubocop:disable Metrics/MethodLength: Method has too many lines
   loop do
     display_list
     option = gets.chomp.to_i
