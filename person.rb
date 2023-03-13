@@ -24,7 +24,6 @@ class Person < Nameable
     @age >= 18
   end
 
-  # objeto rental {date, book, person}
   def add_rental(rental)
     @rentals.push(rental)
     rental.book.add_rental(rental) unless rental.book.rentals.include?(rental)
